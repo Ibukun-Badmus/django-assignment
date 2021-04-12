@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ibk's Gallery</title>
+    {% load static %}
+    <link rel="stylesheet", type="text/css", href="{% static 'styles.css' %}">
+</head>
+<body>
+        <div class="container">
+            {% for image in photos %}
+                <div class="image-container">
+                    <img src="{{ image.image.url }}" class="image" width="200" height="200">
+                    <h3 class="image-header">{{ image.header }}</h3>
+                </div>
+
+
+            {% endfor %}
+        </div>
+
+</body>
+</html>
